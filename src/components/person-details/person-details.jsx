@@ -9,7 +9,7 @@ export default class PersonDetails extends Component {
 
   state = {
     person: null,
-    loading: true
+    loading: true,
   }
 
   componentDidMount() {
@@ -34,13 +34,12 @@ export default class PersonDetails extends Component {
   }
 
   render() {
-
     if (!this.state.person) {
       return <span>Select a person from a list</span>
     }
 
     if (!this.state.loading) {
-      return <Spinner/>
+      return <Spinner />
     }
 
     const {id, name, gender, birthYear, eyeColor} = this.state.person
